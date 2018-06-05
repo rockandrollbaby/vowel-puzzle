@@ -14,7 +14,7 @@ $(document).ready(function() {
     var outArray =[];
     function transform(param1, param2){
       param1.forEach(function(step) {
-        if (step.toString().toLowerCase() === "a") {
+        if ((step.toString().toLowerCase() === "a") || (step.toString().toLowerCase() === "e") || (step.toString().toLowerCase() === "i") || (step.toString().toLowerCase() === "o") || (step.toString().toLowerCase() === "u")) {
           param2.push("*")
         } else {
           param2.push(step)
@@ -24,7 +24,8 @@ $(document).ready(function() {
     };
     var bob = transform(procArray,outArray);
     var fred = bob.join("");
-    alert(fred);
+    // alert(fred);
+    $(".output").text(fred);
     event.preventDefault();
 
   });

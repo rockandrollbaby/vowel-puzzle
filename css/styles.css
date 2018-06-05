@@ -1,3 +1,7 @@
-/*#puzzleBody {
+#puzzleBody {
   display: none;
+}
+
+#result {
+  font-size: 30px;
 }
